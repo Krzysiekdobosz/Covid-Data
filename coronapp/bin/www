@@ -1,11 +1,21 @@
 #!/usr/bin/env node
 
 /**
+ * Ten plik jest punktem wejściowym dla uruchomienia aplikacji serwera.
+ * Ładuje i konfiguruje aplikację Express, tworzy serwer HTTP i ustawia go do nasłuchiwania na porcie określonym
+ * w zmiennych środowiskowych lub domyślnie na porcie 3000. Zawiera funkcje obsługujące zdarzenia 
+ * związane z serwerem, takie jak błędy i zdarzenia nasłuchiwania.
+ */
+
+/**
  * Module dependencies.
  */
 
+// Importowanie aplikacji z pliku '../app'
 var app = require('../app');
+// Importowanie modułu debug do debugowania serwera
 var debug = require('debug')('coronapp:server');
+// Importowanie modułu http do obsługi serwera HTTP
 var http = require('http');
 
 /**
